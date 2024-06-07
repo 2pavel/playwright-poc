@@ -8,4 +8,8 @@ export class LandingPage {
     this.page = page
     this.loginButton = page.getByRole('link', { name: 'Log in' })
   }
+
+  async goToLogin() {
+    this.loginButton.click();
+  }
 }
