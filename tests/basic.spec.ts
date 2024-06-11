@@ -6,12 +6,6 @@ test.describe('test', () => {
 
     console.log(await page.context().storageState())
 
-    await expect(page).toHaveTitle('asd')
-
-
-    // TODO: - storage authentication does not work
-    //       - make sure that it is not possible to set it up this way
-    //       - try beforeEach hook using the storageState (simply click Log In on landing page after setup)
-    //       - if it does not work, set up login before each test
+    await expect(page).toHaveTitle('Project 1 | Base Workspace (List)')
   })
 })

@@ -7,7 +7,6 @@ setup('authenticate', async ({ page }) => {
   // Perform authentication steps. Replace these actions with your own.
   await page.goto('/');
   const pm = new PageManager(page)
-  await pm.landingPage.goToLogin()
   await pm.loginPage.loginAsUser()
 
   // Wait until the page receives the cookies.
@@ -17,6 +16,7 @@ setup('authenticate', async ({ page }) => {
   // Alternatively, you can wait until the page reaches a state where all cookies are set.
 
   await page.waitForLoadState('domcontentloaded')
+  await page.waitForURL('https://app.clickup.com/9015725111/v/l/8cp231q-375')
 
   // End of authentication steps.
 
